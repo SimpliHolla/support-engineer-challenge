@@ -1,0 +1,47 @@
+Here's a step-by-step breakdown of how I would investigate the deployment issue the customer reported:
+
+Review Customer Description:
+Carefully read and understand the details provided by the customer in the support email. Make note of any specific actions they took before encountering the issue.
+
+Analyze Error Message:
+Focus on the error message they shared:
+
+vbnet
+Copy code
+v83 is being deployed
+c2258102: yyz pending
+c2258102: yyz pending
+c2258102: yyz running unhealthy [health checks: 1 total]
+c2258102: yyz pending
+c2258102: yyz pending
+c2258102: yyz pending
+c2258102: yyz pending v83 failed - Failed due to unhealthy allocations - not rolling back to stable job version 83 as current job has same specification
+Research the Error:
+Research the error message, and see if it's a known issue within your environment or deployment platform. This can give you insights into potential causes and solutions.
+
+Check Deployment Configuration:
+Investigate the deployment configuration. Ensure that the version being deployed (v83 in this case) is set up correctly and that there are no conflicts or issues with the allocation specifications.
+
+Review Recent Changes:
+Ask the customer about any recent changes they made to their app. A small change could have unexpected consequences on deployment. Focus on changes related to dependencies, configurations, or any settings that could affect deployment.
+
+Examine Health Checks:
+The error mentions "unhealthy allocations." Review the health check configurations and ensure they are correctly set up. An unhealthy health check could lead to deployment failures.
+
+Check Resource Allocations:
+Analyze the resource allocations specified for the deployment. Are they sufficient for the app's requirements? Make sure that the allocated resources match the app's needs.
+
+Investigate Logs:
+If available, delve into deployment logs. Look for any error messages, warnings, or anomalies that could provide insights into what went wrong during the deployment process.
+
+Test the Deployment:
+Create a test environment, if possible, and attempt to replicate the customer's deployment process. This could help you pinpoint the exact step or configuration that's causing the issue.
+
+Reach Out to Tech Team:
+If you're unable to identify the issue after following the above steps, involve your technical team. Discuss the problem, the actions you've taken so far, and gather their insights.
+
+Engage the Customer:
+Keep the customer informed about your progress. Update them on your findings and let them know you're actively working on resolving the issue.
+
+Document Findings and Solutions:
+As you troubleshoot, document your steps, findings, and solutions. This can be helpful for future reference and for sharing knowledge within your team.
